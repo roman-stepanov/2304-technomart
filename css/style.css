@@ -1,0 +1,18 @@
+body {
+	font-family: "Cuprum", "Arial", sans-serif;
+	color: #000000;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: normal;
+	color: #32425c;
+	line-height: 1;
+}
+
+h3 {
+	font-size: 36px;
+	font-weight: bold;
+	color: #32425c;
+	line-height: 1;
+}
