@@ -107,15 +107,15 @@ body {
 }
 
 .promo-catalog .materials {
-	background: #f6b22d url("img/materials.png") 85% 50% no-repeat;
+	background: #f6b22d url("../img/materials.png") 85% 50% no-repeat;
 }
 
 .promo-catalog .instruments {
-	background: #4aafde url("img/instruments.png") 85% 50% no-repeat;
+	background: #4aafde url("../img/instruments.png") 85% 50% no-repeat;
 }
 
 .promo-catalog .technics {
-	background: #cc79d1 url("img/technics.png") 85% 50% no-repeat;
+	background: #cc79d1 url("../img/technics.png") 85% 50% no-repeat;
 }
 
 .slider {
@@ -167,11 +167,11 @@ body {
 }
 
 .promo-offer .discount {
-	background: #85d179 url("img/discount.png") 85% 50% no-repeat;
+	background: #85d179 url("../img/discount.png") 85% 50% no-repeat;
 }
 
 .promo-offer .delivery {
-	background: #f6b22d url("img/delivery.png") 85% 50% no-repeat;
+	background: #f6b22d url("../img/delivery.png") 85% 50% no-repeat;
 }
 
 
