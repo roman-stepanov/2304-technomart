@@ -93,6 +93,7 @@ body {
 
 .promo-catalog li {
 	display: inline-block;
+	vertical-align: top;
 	font-size: 24px;
 	line-height: 30px;
 	color: #ffffff;
@@ -157,6 +158,7 @@ body {
 
 .promo-offer li {
 	display: inline-block;
+	vertical-align: top;
 	font-size: 24px;
 	line-height: 30px;
 	color: #ffffff;
@@ -198,6 +200,7 @@ body {
 
 .goods-item {
 	display: inline-block;
+	vertical-align: top;
 	font-size: 16px;
 	text-align: center;
 	width: 218px;
@@ -221,6 +224,7 @@ body {
 
 .brand {
 	display: inline-block;
+	vertical-align: top;
 	font-size: 16px;
 	text-align: center;
 	width: 218px;
