@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Техномарт</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&subset=cyrillic">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -13,12 +12,13 @@
 				<div class="container clearfix">
 					<a class="header-logo" href="index.html">Техномарт</a>
 					<form class="search" action="#" method="get">
-						<input type="search" name="search" id="search-field" placeholder="Поиск:">
+						<input class="search-input" type="search" name="search" id="search-field" placeholder="Поиск:">
+						<label class="search-label" for="search-field"></label>
 					</form>
 					<div class="top-buttons">
-						<a class="btn-bookmarks" href="#">Закладки: 0</a>
-						<a class="btn-cart" href="#">Корзина: 0</a>
-						<a class="btn-order" href="#">Оформить заказ</a>
+						<a href="#" class="btn-bookmarks">Закладки: 0</a>
+						<a href="#" class="btn-cart fill-cart">Корзина: 10</a>
+						<a href="#" class="btn-order">Оформить заказ</a>
 					</div>
 				</div>
 			</section>	
@@ -30,7 +30,7 @@
 						и инструментов для ремонта
 					</div>	
 					<div class="header-contacts">
-						<span class="header-phone">+7 (812) 555-05-05</span>
+						<span class="header-phone">+7 (812) 555-05-55</span>
 						<span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
 					</div>
 					<div class="header-user">
@@ -57,13 +57,13 @@
 				</div>
 			</section>	
 		</header>
-		<main>			
+		<main>
 			<section class="content-title">
 				<div class="container">
 					<ul class="breadcrumbs">
 						<li><a class="home" href="#">Главная</a></li>
 						<li><a href="#">Каталог</a></li>
-						<li><a href="#">Инструменты</a></li>
+						<li><a href="#">Инструмент</a></li>
 						<li><span>Перфораторы</span></li>
 					</ul>
 					<h1>Перфораторы</h1>
@@ -73,32 +73,56 @@
 				<div class="container clearfix">
 					<form class="filter" action="#" method="get">
 						<b>Фильтр:</b>
-						<fieldset>
+						<fieldset class="filter-price">
 							<legend>Цена:</legend>
-							<input type="range" name="price-range" min="0" max="50000">
-							<input type="number" name="min-price" value="0">
-							-
-							<input type="number" name="max-price" value="30000">
+							<div class="filter-range">
+								<div class="range-controls">
+									<div class="scale">
+										<div class="bar"></div>
+									</div>
+									<div class="toggle toggle-min"></div>
+									<div class="toggle toggle-max"></div>
+								</div>
+								<div class="price-controls">
+									<input class="min-price" type="text" name="min-price" value="0">
+									<span>&mdash;</span>
+									<input class="max-price" type="text" name="max-price" value="30000">
+								</div>
+							</div>
 						</fieldset>
-						<fieldset>
+						<fieldset class="filter-brands">
 							<legend>Производители:</legend>
-							<input type="checkbox" name="bosch" id="bosch" checked>
-							<label for="bosch">Bosch</label><br>
-							<input type="checkbox" name="interskol" id="interskol">
-							<label for="interskol">Интерскол</label><br>
-							<input type="checkbox" name="makita" id="makita" checked>
-							<label for="makita">Makita</label><br>
-							<input type="checkbox" name="dewalt" id="dewalt">
-							<label for="dewalt">Dewalt</label><br>
-							<input type="checkbox" name="hitachi" id="hitachi">
-							<label for="hitachi">Hitachi</label><br>
+							<label class="filter-checkbox" for="bosch">
+								<input type="checkbox" name="bosch" id="bosch" checked>
+								<span class="checkbox-indicator"></span>Bosch
+							</label>
+							<label class="filter-checkbox" for="interskol">
+								<input type="checkbox" name="interskol" id="interskol">
+								<span class="checkbox-indicator"></span>Интерскол
+							</label>
+							<label class="filter-checkbox" for="makita">
+								<input type="checkbox" name="makita" id="makita" checked>
+								<span class="checkbox-indicator"></span>Makita
+							</label>
+							<label class="filter-checkbox" for="dewalt">
+								<input type="checkbox" name="dewalt" id="dewalt">
+								<span class="checkbox-indicator"></span>Dewalt
+							</label>
+							<label class="filter-checkbox" for="hitachi">
+								<input type="checkbox" name="hitachi" id="hitachi">
+								<span class="checkbox-indicator"></span>Hitachi
+							</label>
 						</fieldset>
-						<fieldset>
+						<fieldset class="filter-power">
 							<legend>Питание:</legend>
-							<input type="radio" name="power-type" value="power-type1" id="power-type1" checked>
-							<label for="power-type1">Аккумуляторные</label><br>
-							<input type="radio" name="power-type" value="power-type2" id="power-type2">
-							<label for="power-type2">Сетевые</label><br>
+							<label class="filter-radio" for="power-type1">
+								<input type="radio" name="power-type" value="power-type1" id="power-type1" checked>
+								<span class="radio-indicator"></span>Аккумуляторные
+							</label>
+							<label class="filter-radio" for="power-type2">
+								<input type="radio" name="power-type" value="power-type2" id="power-type2">
+								<span class="radio-indicator"></span>Сетевые
+							</label>
 						</fieldset>
 						<button type="submit">Показать</button>
 					</form>
@@ -108,7 +132,7 @@
 							<a class="active" href="#">По цене</a>
 							<a class="" href="#">По типу</a>
 							<a class="" href="#">По функционалу</a>						
-						</div>							
+						</div>
 						<div class="sorting-order">
 							<a class="arrow-up active" href="#">По возрастанию</a>
 							<a class="arrow-down" href="#">По убыванию</a>
@@ -141,7 +165,7 @@
 								<a class="goods-bookmark" href="#">В закладки</a>
 							</div>
 							<img src="img/bosch2000.jpg" width="185" height="100" alt="Перфоратор Bosch BFG 2000">
-							<strong class="goods-caption">Перфоратор BOSCH BFG 3000</strong>
+							<strong class="goods-caption">Перфоратор BOSCH BFG 2000</strong>
 							<span class="goods-old-price"></span>
 							<a class="goods-price" href="#">12500 р.</a>
 						</article>
@@ -171,7 +195,7 @@
 								<a class="goods-bookmark" href="#">В закладки</a>
 							</div>
 							<img src="img/bosch2000.jpg" width="185" height="100" alt="Перфоратор Bosch BFG 2000">
-							<strong class="goods-caption">Перфоратор BOSCH BFG 3000</strong>
+							<strong class="goods-caption">Перфоратор BOSCH BFG 2000</strong>
 							<span class="goods-old-price"></span>
 							<a class="goods-price" href="#">12500 р.</a>
 						</article>
@@ -201,7 +225,7 @@
 								<a class="goods-bookmark" href="#">В закладки</a>
 							</div>
 							<img src="img/bosch2000.jpg" width="185" height="100" alt="Перфоратор Bosch BFG 2000">
-							<strong class="goods-caption">Перфоратор BOSCH BFG 3000</strong>
+							<strong class="goods-caption">Перфоратор BOSCH BFG 2000</strong>
 							<span class="goods-old-price"></span>
 							<a class="goods-price" href="#">12500 р.</a>
 						</article>
@@ -218,7 +242,7 @@
 				<div class="container">
 					<b>Пара слов о перфораторах</b>
 					<p>
-						Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+						Перфоратор &mdash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
 						Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
 					</p>
 				</div>
@@ -270,12 +294,21 @@
 					</div>
 					<div class="footer-developer">
 						<p>
-							Разработано -<br>
+							Разработано &mdash;<br>
 							<a href="#">htmlacademy.ru</a>
 						</p>
 					</div>
 				</div>
 			</section>
 		</footer>
+		<div class="modal-goods-added">
+			<button class="modal-close" type="button" title="Закрыть">Закрыть</button>
+			<div class="message">Товар добавлен в корзину!</div>
+			<div class="buttons clearfix">
+				<button class="btn-main" type="button">Оформить заказ</button>
+				<button class="btn-main btn-continue" type="button">Продолжить покупки</button>
+			</div>
+		</div>
+		<div class="modal-overlay"></div>
 	</body>
 </html>

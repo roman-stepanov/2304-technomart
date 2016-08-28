@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Техномарт</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&subset=cyrillic">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -13,7 +12,8 @@
 				<div class="container clearfix">
 					<a class="header-logo" href="#">Техномарт</a>
 					<form class="search" action="#" method="get">
-						<input type="search" name="search" id="search-field" placeholder="Поиск:">
+						<input class="search-input" type="search" name="search" id="search-field" placeholder="Поиск:">
+						<label class="search-label" for="search-field"></label>
 					</form>
 					<div class="top-buttons">
 						<a href="#" class="btn-bookmarks">Закладки: 0</a>
@@ -30,7 +30,7 @@
 						и инструментов для ремонта
 					</div>	
 					<div class="header-contacts">
-						<span class="header-phone">+7 (812) 555-05-05</span>
+						<span class="header-phone">+7 (812) 555-05-55</span>
 						<span class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
 					</div>
 					<div class="header-user">
@@ -71,16 +71,32 @@
 						</li>
 					</ul>
 					<div class="slider">
-						<figure> 		
-							<figcaption>
-								<p class="slider-title">Перфораторы</p>
-								<p class="slider-desc">Настоящие мужские игрушки</p>
-							</figcaption>
-							<img src="img/slider1.jpg" width="620" height="266" alt="Перфораторы">
-						</figure>		
-						<a class="btn-main" href="#">Открыть каталог</a>
-						<a class="prev-slide" href="#" >назад</a>
-						<a class="next-slide" href="#">вперед</a>
+						<input type="radio" name="toggle" id="btn-1" checked>
+						<input type="radio" name="toggle" id="btn-2">
+						<div class="slider-controls">
+							<label for="btn-1"></label>
+							<label for="btn-2"></label>
+						</div>
+						<div class="slides">
+							<figure class="slide">
+								<figcaption class="slide-text">
+									<p class="slide-title">Перфораторы</p>
+									<p class="slide-desc">Настоящие мужские игрушки</p>
+								</figcaption>
+								<img src="img/slider1.jpg" width="620" height="266" alt="Перфораторы">
+								<a class="btn-main" href="#">Открыть каталог</a>
+							</figure>
+							<figure class="slide">
+								<figcaption class="slide-text">
+									<p class="slide-title">Дрели</p>
+									<p class="slide-desc">Соседям на радость!</p>
+								</figcaption>
+								<img src="img/slider2.jpg" width="620" height="266" alt="Дрели">
+								<a class="btn-main" href="#">Открыть каталог</a>
+							</figure>
+						</div>
+						<button class="prev-slide" type="button" title="Назад">назад</button>
+						<button class="next-slide" type="button" title="Вперед">вперед</button>
 					</div>
 					<ul class="promo-offer">
 						<li class="discount">
@@ -97,7 +113,7 @@
 			<section class="popular-goods">
 				<div class="container">
 					<div class="popular-title">
-						<h2>Популярные товары</h2>
+						<h2>Популярные товары:</h2>
 						<a class="btn-main" href="#">Все популярные товары</a>
 					</div>
 					<div class="goods">
@@ -106,7 +122,7 @@
 								<a class="goods-buy" href="#">Купить</a>
 								<a class="goods-bookmark" href="#">В закладки</a>
 							</div>
-							<img src="img/bosch9000.jpg" width="185" height="100" alt="Перфоратор Bosch BFG 9000">
+							<img src="img/bosch9000.jpg" width="185" height="100" alt="Перфоратор Bosch BFG 9000">								
 							<strong class="goods-caption">Перфоратор BOSCH BFG 9000</strong>
 							<span class="goods-old-price">32500 р.</span>
 							<a class="goods-price" href="#">25500 р.</a>
@@ -147,7 +163,7 @@
 			<section class="popular-brands">
 				<div class="container">
 					<div class="popular-title">
-						<h2>Популярные производители</h2>
+						<h2>Популярные производители:</h2>
 						<a class="btn-main" href="#">Все производители</a>
 					</div>
 					<div class="brands">
@@ -171,19 +187,44 @@
 					</p>
 				</div>
 				<div class="container clearfix">
-					<div class="services-left">
-						<ul class="services-list">
-							<li><a class="active" href="#">Доставка</a></li>
-							<li><a href="#">Гарантия</a></li>
-							<li><a href="#">Кредит</a></li>
-						</ul>
-					</div>
-					<div class="services-right">
-						<h3>Доставка</h3>
-						<p>
-							Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
-							Ведь мы неплохо заработаем, поднимае его на ваш этаж!
-						</p>
+					<div class="services-slider">
+						<input type="radio" name="toggle-service" id="btn-service-1" checked>
+						<input type="radio" name="toggle-service" id="btn-service-2">
+						<input type="radio" name="toggle-service" id="btn-service-3">
+						<div class="services-slider-controls">
+							<label for="btn-service-1">Доставка</label>
+							<label for="btn-service-2">Гарантия</label>
+							<label for="btn-service-3">Кредит</label>
+						</div>
+						<div class="services-slides">
+							<div class="services-slide">
+								<h3>Доставка</h3>
+								<p>
+									Мы с удовольствием доставим ваш товар прямо<br>
+									к вашему подъезду совершенно бесплатно!<br>
+									Ведь мы неплохо заработаем,<br>
+									поднимае его на ваш этаж!
+								</p>
+							</div>
+							<div class="services-slide">
+								<h3>Гарантия</h3>
+								<p>
+									Если купленный у нас товар поломается или заискрит,<br>
+									а также в случае пожара, провоцированного его возгаранием,<br>
+									вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+									сгоревший товар на новый.<br>
+									Дом уж восстановите как-нибудь.
+								</p>
+							</div>
+							<div class="services-slide">
+								<h3>Кредит</h3>
+								<p>
+									Залезть в долговую яму стало проще!<br>
+									Кредитные консультанты придут вам на помощь.
+								</p>
+								<a class="btn-main" href="#">Отправить завявку</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -192,7 +233,7 @@
 					<div class="company-left">
 						<b>Компания «Техномарт»</b>
 						<p>
-							Настоящий шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
+							Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
 						</p>
 						<p>
 							Мы можем доставить ваш товар в самые отдаленные точки России!<br>
@@ -213,7 +254,7 @@
 						</p>
 						<img src="img/smallmap.jpg" width="300" height="158" alt="Компания «Техномарт»">					
 						<a class="btn-main" href="#">Заблудились? Напишите нам!</a>
-					</div>															
+					</div>
 				</div>
 			</section>
 		</main>
@@ -263,12 +304,40 @@
 					</div>
 					<div class="footer-developer">
 						<p>
-							Разработано -<br>
+							Разработано &mdash;<br>
 							<a href="#">htmlacademy.ru</a>
 						</p>
 					</div>
 				</div>
 			</section>
 		</footer>
+		<div class="modal-write-us">
+			<button class="modal-close" type="button" title="Закрыть">Закрыть</button>
+			<form class="write-us" action="#" method="post">
+				<div class="write-us-inputs">
+					<div class="clearfix">
+						<fieldset class="write-us-name">
+							<legend>Ваше имя:</legend>
+							<input type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста">	
+						</fieldset>
+						<fieldset class="write-us-email">
+							<legend>Ваш e-mail:</legend>
+							<input type="email" name="email" id="email" placeholder="Для отправки ответа">	
+						</fieldset>
+					</div>						
+					<fieldset>
+						<legend>Текст письма:</legend>
+						<textarea name="letter" id="letter" placeholder="В свободной форме"></textarea>
+					</fieldset>					
+				</div>
+				<div class="write-us-send">
+					<button class="btn-main" type="submit">Отправить</button>
+				</div>					
+			</form>
+		</div>
+		<div class="modal-map">
+			<button class="modal-close" type="button" title="Закрыть">Закрыть</button>
+		</div>
+		<div class="modal-overlay"></div>
 	</body>
 </html>
