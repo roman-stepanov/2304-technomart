@@ -1290,7 +1290,7 @@ body {
 
 .footer-contacts {
 	float: left;
-	width: 340px;
+	width: 330px;
 	margin: 32px 0 0 0;
 	padding: 0 0 0 3px;
 	font-size: 18px;
@@ -1300,7 +1300,7 @@ body {
 
 .footer-catalog {
 	float: right;
-	max-width: 585px;
+	max-width: 590px;
 	margin: 32px 0 0 0;
 	padding: 0;
 	font-size: 0;
@@ -1448,6 +1448,7 @@ body {
 	position: absolute;
 	top: 7px;
 	right: 9px;
+	z-index: 100;
 	width: 24px;
 	height: 24px;
 	font-size: 0;
@@ -2085,4 +2086,51 @@ body {
 	width: 220px;
 	color: #000000;
 	background-color: #ffffff;
+}
+
+
+.modal-show-overlay {
+	display: block;
+}
+
+.modal-show {
+	display: block;
+	animation: show-form 0.6s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
+@keyframes show-form {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	60% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes shake {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	10%, 30%, 50%, 70%, 90% {
+		transform: translateX(-10px);
+	}
+	20%, 40%, 60%, 80% {
+		transform: translateX(10px);
+	}
 }
