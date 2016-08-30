@@ -338,8 +338,7 @@ body {
 	left: 14px;
 	width: 20px;
 	height: 20px;
-	background: url("../img/icons.png") no-repeat;
-	background-position: -369px -10px;
+	background: url("../img/icons.png") no-repeat -369px -10px;
 }
 
 .btn-new-user {
@@ -721,7 +720,9 @@ body {
 	font-size: 0;
 	border-left: 3px solid #ffffff;
 	border-bottom: 3px solid #ffffff;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .next-slide::after {
@@ -734,7 +735,9 @@ body {
 	font-size: 0;
 	border-right: 3px solid #ffffff;
 	border-bottom: 3px solid #ffffff;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .promo-offer {
@@ -781,7 +784,9 @@ body {
 	text-align: center;
 	color: #ffffff;
 	background-color: #ee3643;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .popular-title {
@@ -1104,7 +1109,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 36px;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 1;
 	text-transform: uppercase;
 	color: #32425c;
@@ -1470,11 +1475,15 @@ body {
 }
 
 .modal-close::before {
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .modal-close::after {
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .write-us-inputs {
@@ -1618,7 +1627,9 @@ body {
 	height: 8px;
 	border-right: 1px solid #c1c6ce;
 	border-bottom: 1px solid #c1c6ce;
-	transform: rotate(-45deg);	
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);	
 }
 
 .content-title h1 {
@@ -1793,7 +1804,9 @@ body {
 }
 
 .filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .filter-radio input[type="radio"]:checked + .radio-indicator::before {
@@ -2055,7 +2068,9 @@ body {
 	border: 7px solid #ffffff;
 	border-top-width: 0;
 	border-right-width: 0;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .modal-goods-added .message::before {
@@ -2095,11 +2110,34 @@ body {
 
 .modal-show {
 	display: block;
-	animation: show-form 0.6s;
+	-webkit-animation: show-form 0.6s;
+	        animation: show-form 0.6s;
 }
 
 .modal-error {
-	animation: shake 0.6s;
+	-webkit-animation: shake 0.6s;
+	        animation: shake 0.6s;
+}
+
+@-webkit-keyframes show-form {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	60% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes show-form {
@@ -2123,14 +2161,32 @@ body {
 	}
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
 	0%, 100% {
-		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
 	}
 	10%, 30%, 50%, 70%, 90% {
-		transform: translateX(-10px);
+		-webkit-transform: translateX(-10px);
+		        transform: translateX(-10px);
 	}
 	20%, 40%, 60%, 80% {
-		transform: translateX(10px);
+		-webkit-transform: translateX(10px);
+		        transform: translateX(10px);
+	}
+}
+
+@keyframes shake {
+	0%, 100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+	10%, 30%, 50%, 70%, 90% {
+		-webkit-transform: translateX(-10px);
+		        transform: translateX(-10px);
+	}
+	20%, 40%, 60%, 80% {
+		-webkit-transform: translateX(10px);
+		        transform: translateX(10px);
 	}
 }
